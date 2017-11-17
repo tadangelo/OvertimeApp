@@ -15,7 +15,7 @@ FactoryBot.define do
     first_name 'Admin'
     last_name 'User'
     email { generate :email }
-    password_confirmation "admintest"
+    password "admintest"
     password_confirmation "admintest"
   end
 end

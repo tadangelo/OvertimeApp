@@ -7,7 +7,7 @@ describe 'admin dashboard' do
     expect(current_path).to eq(new_user_session_path)
   end
 
-  it 'cannot be reached by non admin user' do
+  it 'cannot be reached by a non admin user' do
   user = FactoryBot.create(:user)
   login_as(user, :scope => :user)
 
@@ -16,7 +16,7 @@ describe 'admin dashboard' do
   expect(current_path).to eq(root_path)
   end
 
-  it 'can be reached by admin user' do
+  it 'can be reached by an admin user' do
   admin_user = FactoryBot.create(:admin_user)
   login_as(admin_user, :scope => :user)
 
