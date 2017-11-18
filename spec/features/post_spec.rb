@@ -2,21 +2,22 @@ require 'rails_helper'
 
 describe 'navigate' do
   before do
-    user = FactoryBot.create(:user)
-      login_as(@user, :scope => :user)
-    end
+    @user = FactoryBot.create(:user)
+    login_as(@user, :scope => :user)
+  end
+
   describe 'index' do
     before do
       visit posts_path
     end
 
-    it 'can be reached successfully' do
-      expect(page.status_code).to eq(200)
-    end
+      it 'can be reached successfully' do
+        expect(page.status_code).to eq(200)
+      end
 
-    it 'has a title of Posts' do
-      expect(page).to have_content(/Posts/)
-    end
+      it 'has a title of Posts' do
+        expect(page).to have_content(/Posts/)
+      end
 
     it 'has a list of posts' do
       post1 = FactoryBot.build_stubbed(:post)
@@ -30,7 +31,7 @@ describe 'navigate' do
     it 'has a link from the homepage' do
       visit root_path
 
-      click_link("delete_post_#{@post.id}_from_index")
+      click_link("new_post_from_nav")
       expect(page.status_code).to eq(200)
     end
   end
@@ -40,7 +41,7 @@ describe 'navigate' do
       @post = FactoryBot.create(:post)
       visit posts_path
 
-      click_link("new_post_from_nav")
+      click_link("delete_post_#{@post.id}_from_index")
       expect(page.status_code).to eq(200)
     end
   end
@@ -77,7 +78,6 @@ describe 'navigate' do
     end
 
     it 'can be reached by clicking edit on index page' do
-      @post = FactoryBot.create(:post)
       visit posts_path
 
       click_link("edit_#{@post.id}")
