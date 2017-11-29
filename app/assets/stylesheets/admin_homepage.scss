@@ -22,3 +22,14 @@
 .pending-details {
   font-weight: 900;
 }
+
+.info_btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage-block:hover {
+  background-color: LightSteelBlue;
+}
