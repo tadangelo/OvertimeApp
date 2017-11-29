@@ -12,9 +12,13 @@
 .homepage-block {
   background-color: AliceBlue;
   color: black;
-  margin: 15px;
+  margin: 15px 42px 15px 42px;
   padding: 15px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+}
+
+.pending-details {
+  font-weight: 900;
 }
