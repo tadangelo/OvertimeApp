@@ -64,5 +64,7 @@ gem 'twilio-ruby', '~> 5.5'
 gem 'dotenv-rails' , :groups => [:development, :test]
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'sendgrid-ruby'
+gem 'newrelic_rpm'
+
 
 ruby "2.4.1"
