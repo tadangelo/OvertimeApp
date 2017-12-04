@@ -18,3 +18,4 @@
 
 ## UI:
 - Bootstrap -> formatting
+- All refactors done
